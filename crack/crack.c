@@ -1,3 +1,6 @@
+//NGPR - I didn't do this problem, so I don't quite understand how this works. However you have once again used very clear variable
+//names, and I really appreciated how well commented this program was. Style-wise, its definitely on-point, but not all the use
+//cases I tried worked.
 #define _XOPEN_SOURCE
 #include <unistd.h>
 #include <cs50.h>

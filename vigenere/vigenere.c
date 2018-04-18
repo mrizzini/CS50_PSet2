@@ -1,3 +1,5 @@
+//NGPR- Only thing I would consider doing differently is reviewing your upper/lower case handling. Some lines are duplicated between
+//the two sets. I wonder if some of the differences could be stored to variables, and then just used used once (the whole magic number thing)
 #include <cs50.h>
 #include <ctype.h>
 #include <stdio.h>
@@ -52,7 +54,7 @@ int main(int argc, string argv[])
             upperK = (toupper(k[kIndex]) - 65); // change the user's key's ascii value to uppercase and minus 65
             upperConvert = (upperASCII + upperK) % 26; // mod by 26
             upperCipher = upperConvert + 65; // add 65 to get ciphered letter
-            kIndex++; // moves index of k up one
+            kIndex++; // moves index of k up one //NGPR - Example of comment that's a little unnecessary
             kIndex = kIndex % kLength; // mod kIndex by length of k to account for wrap around
 
             // if (q == (kLength)) // if user's key is equal to kLength (which is kLength - 1)

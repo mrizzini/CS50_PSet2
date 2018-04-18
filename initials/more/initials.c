@@ -1,3 +1,5 @@
+//NGPR - Very clear, very simple. Well done! I think this is another example of where your variable names being so clear
+// that some comments are unnecessary. I'm liking the use of comments to label your brackets though. It must make debugging very easy!
 #include <cs50.h>
 #include <ctype.h>
 #include <stdio.h>

@@ -1,3 +1,6 @@
+//NGPR - Once again, great variable names, lots of comments. Some comments seem redundant, since your variable names are so clear
+//I'd try to consider which of your variable names and operators cover the whole of information, so very clear items like "counter++;"
+//can go without comments.
 #include <cs50.h>
 #include <ctype.h> // gets isupper/isalpha function
 #include <stdio.h>
@@ -18,7 +21,7 @@ int main(void)
     {
         if (!isalpha(fullName[i])) // this checks for the first time a non alphabetical char hits (should be the space in the name)
         {
-            initials[counter] = toupper(fullName[i + 1]); // adds in the char AFTER the first nonalpha. sets to initials array
+            initials[counter] = toupper(fullName[i + 1]); // adds in the char AFTER the first nonalpha. sets to initials array //NGPR - I had characters check the index BEFORE them for spaces, but I like your approach more.
             counter++; // increments counter only after a letter is stored in there
         }
     }

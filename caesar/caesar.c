@@ -1,3 +1,6 @@
+//NGPR - Most interesting thing about this is how you handle the printing. Rather than saving up char and printing all at once, its printed
+//as its decoded. On the one hand, this seems a little harder to maintain. On the other it dodges a very difficult thing I struggled with
+//(storing char in new string). Overall I think I like this approach a lot!
 #include <cs50.h>
 #include <ctype.h>
 #include <stdio.h>
@@ -7,12 +10,13 @@
 int main(int argc, string argv[])
 {
 
-    if (argc != 2) // if the user does not type in 2 words at the command line, print error and return 1, exiting program
+    if (argc != 2) // if the user does not type in 2 words at the command line, print error and return 1, exiting program //NGPR - Not to be nit-picky, but wouldn't this be *one* word, after the program name is included?
     {
         printf("ERROR: User must type in just two command-line arguements, with the second being a non-negative integer\n");
         return 1;
     }
 
+    //NGPR - Great variable names, very clear!
     int k = atoi(argv[1]);
     int upperASCII;
     int lowerASCII;
@@ -25,6 +29,9 @@ int main(int argc, string argv[])
     // if the user types in 2 words at the command line (0 is the file name, 1 is the next word. that == 2) then run rest of program
     // printf("Your key was, %i\n", k);
     string plainText = get_string("plaintext: ");
+    //NGPR- I can't decide if I like this approach or not. Printing half the statement here, and letting it complete
+    //by not having the \n definitely seems like a clever approach, but its also splitting it into two places.
+    //Seems harder to maintain.
     printf("ciphertext: ");
     // printf("Plaintext is %s", plainText);
 
